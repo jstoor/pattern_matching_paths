@@ -1,7 +1,6 @@
-import os
 import sys
 import re
-from itertools import islice, dropwhile
+from itertools import islice
 
 # Note : Let's make use of Pythons buffered IO and memory management,
 #  	     in case we're dealing with an exceptionally large file.
@@ -87,6 +86,8 @@ class PatternPathParser(object):
 		path_gen = self._read_paths(file_object)
 		number_of_paths = path_gen.next()
 
+		# TODO : Think about a better algorithm, to make "best" matches,
+		# rather than mathcing on the first mathcing pattern in source sequence.
 		for line in path_gen:
 			for p in patterns:
 				if re.search(p[1], line, re.IGNORECASE):
