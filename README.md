@@ -66,6 +66,9 @@ From the project root directory, run the following command to execute the main u
 
 python -m unittest discover -p 'pattern_path_parser_test.py'
 
+or to execure the application directly e.g. from the scooby directory;
+
+cat ../test/file_01.txt | python pattern_path_parser.py
 
 
 Dependancies:

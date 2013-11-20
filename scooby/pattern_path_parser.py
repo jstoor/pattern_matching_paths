@@ -97,5 +97,6 @@ class PatternPathParser(object):
 				sys.stdout.write("NO MATCH\n")
 
 
-
+if __name__ == "__main__":
+	PatternPathParser().process_paths(sys.stdin)
 
